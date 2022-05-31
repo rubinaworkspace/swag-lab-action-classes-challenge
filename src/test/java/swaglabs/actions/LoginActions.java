@@ -13,4 +13,13 @@ public class LoginActions extends UIInteractions {
 
 
     }
+
+    public String errorMessage(){
+        return $("[data-test=error]").getText();
+    }
+
+    public void asAStandardUser() {
+
+        withCredentials("standard_user","secret_sauce");
+    }
 }
